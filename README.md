@@ -7,5 +7,6 @@ I started this project to solve the previous issue. This project adds some PHP a
 To use it, just git clone the repo into the root directory of your web server. Then add the path to the clinker executable in your server to the global variable "clinker_path".
 
 Cheers,
+
 Semidán
 
