@@ -1,0 +1,61 @@
+:root {
+  overflow-x: hidden;
+}
+
+form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 0;
+  margin-top: 0vh;
+  width: 100%;
+}
+
+#gbk_input {
+  margin-left: 1%;
+}
+
+#hide-help-container {
+  display: flex;
+  align-items: right;
+  justify-content: right;
+  text-align: right;
+  width: 100%;
+}
+
+#help-button {
+  display: inline;
+  margin-left: 2%;
+}
+
+#hide-help {
+  text-align: right;
+}
+
+iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  margin: 0;
+}
+
+#img-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100vw;
+  height: auto;
+  margin-top: 10%;
+}
+
+article {
+  width: 50%;
+  margin-left: 25%;
+  margin-top: 10%;
+  margin-bottom: 10%;
+  font-size: 1.1em;
+  text-align: justify;
+  display: none;
+}
