@@ -1,8 +1,8 @@
 <?php
-
-$GLOBALS["work_directory"] = "/home/robaina/Documents/Clinker_Server/clinker_server";
-$GLOBALS["clinker_path"] = "/home/robaina/.local/bin/clinker";
-$GLOBALS["max_time_in_server"] = 2 * 3600;
+// Tested on Ubuntu 20.04 and 16.04
+$GLOBALS["work_directory"] = "path/to/clinker_server";
+$GLOBALS["clinker_path"] = "path/to/clinker.exe";
+$GLOBALS["max_time_in_server"] = 2 * 3600; // Max time of temp files before removing from server
 $GLOBALS["sessions_directory"] = "clinker_server/clinker_user_sessions";
 
 function generateRandomString($length = 10) {
@@ -23,7 +23,7 @@ function delTree($dir) {
     return rmdir($dir);
   }
 
-function deleteOldUserDirectories($time_limit = $GLOBALS["max_time_in_server"]) {
+function deleteOldUserDirectories($time_limit = 2 * 3600) {
   $current_time = time();
   $directories = array_diff(scandir($GLOBALS["sessions_directory"]), array('..', '.'));
 
@@ -51,7 +51,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     chmod($temp_user_upload, 0777);
 
     // Delete old user directories
-    deleteOldUserDirectories($time_limit = 2 * 3600);
+    deleteOldUserDirectories($time_limit = $GLOBALS["max_time_in_server"]);
 
     // Count total files
     $countfiles = count($_FILES["GBK_files"]["name"]);
