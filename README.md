@@ -14,6 +14,10 @@ Here are the additions with respect to the "local" clinker:
 2. Tools sidebar slightly modified to fit in screen as well as to remove redundant options
 3. Gene info displayed on hover. I found this addition useful for teaching purposes.
 
+And here is an example of how it looks like (sorry, currently don't have access to a server so I cannot provide a working example):
+
+![example](example.png)
+
 Cheers,
 
 Semidán
